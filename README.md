@@ -69,8 +69,8 @@ Pizza-Sales-Analytics-Dashboard-SQL-Tableau/
 - **Date Slicer** — filter by order date (2015–2016)
 
 ### Screenshot
-![SQL Power BI Dashboard](<img width="1155" height="660" alt="Screenshot 2026-04-09 023835" src="https://github.com/user-attachments/assets/930fe93a-ceb2-4ec9-a33a-b1342bc79353" />
-)
+![SQL Power BI Dashboard]<img width="1155" height="660" alt="Screenshot 2026-04-09 023835" src="https://github.com/user-attachments/assets/930fe93a-ceb2-4ec9-a33a-b1342bc79353" />
+
 
 ---
 
@@ -102,10 +102,10 @@ Pizza-Sales-Analytics-Dashboard-SQL-Tableau/
 - **Bottom 5 by Orders** — Brie Carre Pizza (480 orders)
 
 ### Screenshots
-![Tableau Home Dashboard](<img width="1548" height="866" alt="Screenshot 2026-04-09 025208" src="https://github.com/user-attachments/assets/4b1166d9-0e60-4447-8108-c513593b6bf1" />
-)
-![Tableau Sellers Dashboard](<img width="1541" height="867" alt="Screenshot 2026-04-09 025230" src="https://github.com/user-attachments/assets/5b77d0bc-756b-44d7-a9aa-d646994305ba" />
-)
+![Tableau Home Dashboard] <img width="1548" height="866" alt="Screenshot 2026-04-09 025208" src="https://github.com/user-attachments/assets/4b1166d9-0e60-4447-8108-c513593b6bf1" />
+
+![Tableau Sellers Dashboard]<img width="1541" height="867" alt="Screenshot 2026-04-09 025230" src="https://github.com/user-attachments/assets/5b77d0bc-756b-44d7-a9aa-d646994305ba" />
+
 
 ---
 
