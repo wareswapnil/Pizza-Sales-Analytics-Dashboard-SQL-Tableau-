@@ -1,220 +1,232 @@
 # 🍕 Pizza Sales Analytics Dashboard
 
-> An end-to-end sales analytics project built with **SQL + Power BI** and **SQL + Tableau**, transforming raw pizza order data into two fully interactive Business Intelligence dashboards with deep insights on revenue, orders, product performance, and customer behavior.
+> **End-to-End Sales Analytics Project** using SQL, Python (Jupyter Notebook), Excel, Power BI & Tableau
 
 ---
 
 ## 📊 Project Overview
 
-This project analyzes **Pizza Sales data (Jan 2015 – Dec 2015)** across **two separate dashboard implementations**:
+This project performs a comprehensive analysis of pizza sales data spanning **January 2015 to December 2015**. It covers the full analytics pipeline — from raw data cleaning and SQL querying to interactive dashboards in Power BI and Tableau.
 
-| Dashboard | Tool | Focus |
-|---|---|---|
-| Dashboard 1 | **SQL + Power BI** | KPIs, category/size breakdown, best & worst sellers |
-| Dashboard 2 | **SQL + Tableau** | KPIs, hourly/weekly trends, multi-page drill-down views |
-
-All visualizations are backed by structured **SQL queries** for data extraction, aggregation, and KPI calculation.
+**Key Business Questions Answered:**
+- Which pizzas generate the most revenue, orders, and quantity sold?
+- What are the busiest days, times, and months for orders?
+- Which pizza categories and sizes dominate sales?
+- Who are the best and worst performers in the menu?
 
 ---
 
-## 🗂️ Repository Structure
+## 🗂️ Project Structure
 
 ```
-Pizza-Sales-Analytics-Dashboard-SQL-Tableau/
+Pizza-Sales-Analytics-Dashboard/
 │
 ├── data/
-│   └── pizza_sales.csv                    # Raw dataset
+│   └── pizza_sales.csv                  # Raw sales dataset
 │
 ├── sql/
-│   ├── kpi_queries.sql                    # Revenue, orders, avg value KPIs
-│   ├── trend_analysis.sql                 # Daily, hourly, weekly trends
-│   ├── category_size_analysis.sql         # Sales by category and size
-│   └── best_worst_sellers.sql             # Top 5 & Bottom 5 pizza analysis
+│   └── pizza_sales_queries.sql          # All SQL queries used for KPIs & analysis
+│
+├── notebooks/
+│   └── Pizza_Sales_EDA.ipynb            # Jupyter Notebook - EDA & Visualizations
+│
+├── excel/
+│   └── Pizza_Sales_Excel.xlsx           # Excel Dashboard
 │
 ├── powerbi/
-│   └── Pizza_Sales_Dashboard.pbix         # Power BI dashboard file
+│   └── Pizza_Sales_PowerBI.pbix         # Power BI Dashboard (2 pages)
 │
 ├── tableau/
-│   └── Pizza_Sales_Dashboard.twbx         # Packaged Tableau workbook
+│   └── Pizza_Sales_Tableau.twbx         # Tableau Dashboard (2 pages)
 │
-├── assets/
-│   ├── sql-powerbi-dashboard.png
-│   ├── tableau-dashboard-home.png
-│   └── tableau-dashboard-sellers.png
+├── screenshots/
+│   ├── excel_dashboard.png
+│   ├── tableau_page1.png
+│   ├── tableau_page2.png
+│   ├── powerbi_page1.png
+│   └── powerbi_page2.png
 │
 └── README.md
 ```
 
 ---
 
-## 🖥️ Dashboard 1 — SQL + Power BI
+## 📈 Key KPIs (Jan 2015 – Dec 2015)
 
-### KPIs
 | Metric | Value |
 |---|---|
-| 💰 Total Revenue | $68,737 |
-| 🛒 Total Orders | 1,799 |
-| 🍕 Total Pizzas Sold | 4,151 |
-| 💵 Avg Order Value | $38.21 |
-| 📦 Avg Pizzas Per Order | 2.31 |
-
-### Features
-- **Daily Order Trends** — bar chart across all 7 days (peak: Wednesday with 306 orders)
-- **Hourly Order Trends** — line chart showing peak at 12–1 PM and 4–8 PM
-- **% of Sales by Pizza Category** — donut chart (Classic: 27.38%, Supreme: 25.67%, Veggie: 22.99%, Chicken: 23.97%)
-- **% of Sales by Pizza Size** — pie chart (Large dominates at 44.55%)
-- **Total Pizzas Sold by Category** — horizontal bar (Classic: 1253, Supreme: 1013, Veggie: 961, Chicken: 924)
-- **Top 5 Best Sellers** — Hawaiian (219), Classic Deluxe (216), Barbecue Chicken (214)
-- **Bottom 5 Worst Sellers** — Brie Carre at the bottom (32 units)
-- **Date Slicer** — filter by order date (2015–2016)
-
-### Screenshot
-![SQL Power BI Dashboard]<img width="1155" height="660" alt="Screenshot 2026-04-09 023835" src="https://github.com/user-attachments/assets/930fe93a-ceb2-4ec9-a33a-b1342bc79353" />
-
+| 💰 Total Revenue | **$817.86K** |
+| 🧾 Average Order Value | **$38.31** |
+| 🍕 Total Pizzas Sold | **49,574** |
+| 📦 Total Orders | **21,350** |
+| 🔢 Avg Pizzas Per Order | **2.32** |
 
 ---
 
-## 📊 Dashboard 2 — SQL + Tableau
-
-### KPIs
-| Metric | Value |
-|---|---|
-| 💰 Total Revenue | $817.9K |
-| 🛒 Total Orders | 21.4K |
-| 🍕 Total Pizzas Sold | 49.6K |
-| 💵 Avg Order Value | $38.31 |
-| 📦 Avg Pizzas Per Order | 2.32 |
-
-### Page 1 — Home (Sales Overview)
-- **Hourly Trends** — stacked bar by category (peak: 12–1 PM & 4–7 PM)
-- **Weekly Order Trends** — line chart with Avg 402.8 orders/week (peak: Week 48, December)
-- **% Sales by Pizza Category** — donut chart (Classic: $220.05K / 26.91%)
-- **% Sales by Pizza Size** — horizontal bar (Large: 45.9%, Medium: 30.5%, Regular: 21.8%)
-- **Total Orders & Pizzas Sold by Category** — grouped bar chart
-- **Pizza Category & Date Filters** — interactive slicers
-
-### Page 2 — Best & Worst Sellers
-- **Top 5 by Revenue** — Thai Chicken Pizza leads ($43.43K)
-- **Top 5 by Quantity** — Classic Deluxe most ordered (2.45K units)
-- **Top 5 by Orders** — Classic Deluxe with 2,329 orders
-- **Bottom 5 by Revenue** — Brie Carre Pizza ($11.59K)
-- **Bottom 5 by Quantity** — Brie Carre Pizza (490 units)
-- **Bottom 5 by Orders** — Brie Carre Pizza (480 orders)
-
-### Screenshots
-![Tableau Home Dashboard] <img width="1548" height="866" alt="Screenshot 2026-04-09 025208" src="https://github.com/user-attachments/assets/4b1166d9-0e60-4447-8108-c513593b6bf1" />
-
-![Tableau Sellers Dashboard]<img width="1541" height="867" alt="Screenshot 2026-04-09 025230" src="https://github.com/user-attachments/assets/5b77d0bc-756b-44d7-a9aa-d646994305ba" />
-
-
----
-
-## 💡 Key Business Insights
-
-- 📅 **Busiest Days:** Friday and Saturday evenings record the highest order volumes
-- ⏰ **Peak Hours:** 12–1 PM and 4–7 PM are the highest demand windows
-- 📆 **Busiest Week:** Week 48 (December) — single highest weekly order spike
-- 🏆 **Top Category:** Classic pizzas lead in revenue, quantity sold, and total orders
-- 📏 **Top Size:** Large pizzas account for ~45–46% of total sales across both dashboards
-- ⭐ **Best Seller (Revenue):** Thai Chicken Pizza | **Best Seller (Volume):** Classic Deluxe Pizza
-- ❌ **Worst Seller:** Brie Carre Pizza — consistently lowest across revenue, quantity, and orders
-
----
-
-## 🛠️ Tech Stack
+## 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
-| **SQL (MySQL / PostgreSQL)** | Data extraction, KPI queries, trend & category analysis |
-| **Power BI Desktop** | Dashboard 1 — interactive visuals with slicers |
-| **Tableau Desktop / Public** | Dashboard 2 — multi-page drill-down analytics |
-| **Excel / CSV** | Raw data source |
+| **SQL (MySQL / SQL Server)** | Data extraction, KPI calculation, aggregations |
+| **Python (Jupyter Notebook)** | EDA, data cleaning, visualizations (Matplotlib, Seaborn, Pandas) |
+| **Microsoft Excel** | Pivot tables, charts, Excel dashboard |
+| **Power BI** | Interactive dashboard with slicers and drill-down |
+| **Tableau** | Advanced visual analytics and storytelling |
 
 ---
 
-## 📐 SQL Queries
+## 📸 Dashboard Screenshots
 
-### Total Revenue & All KPIs
-```sql
-SELECT 
-    ROUND(SUM(total_price), 2)                                    AS Total_Revenue,
-    ROUND(SUM(total_price) / COUNT(DISTINCT order_id), 2)         AS Avg_Order_Value,
-    SUM(quantity)                                                  AS Total_Pizzas_Sold,
-    COUNT(DISTINCT order_id)                                       AS Total_Orders,
-    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2)            AS Avg_Pizzas_Per_Order
-FROM pizza_sales;
-```
+### 📊 Excel Dashboard
 
-### Hourly Trend for Total Orders
-```sql
-SELECT HOUR(order_time) AS Order_Hour,
-       COUNT(DISTINCT order_id) AS Total_Orders
-FROM pizza_sales
-GROUP BY HOUR(order_time)
-ORDER BY Order_Hour;
-```
+![Excel Dashboard] <img width="1155" height="660" alt="Screenshot 2026-04-09 023835" src="https://github.com/user-attachments/assets/8e51997e-64d2-4847-a87f-b20a5ae3d898" />
 
-### Daily Trend for Total Orders
-```sql
-SELECT DAYNAME(order_date) AS Day_Name,
-       COUNT(DISTINCT order_id) AS Total_Orders
-FROM pizza_sales
-GROUP BY DAYNAME(order_date)
-ORDER BY FIELD(Day_Name,'Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-```
 
-### % Sales by Pizza Category
-```sql
-SELECT pizza_category,
-       ROUND(SUM(total_price), 2) AS Total_Revenue,
-       ROUND(SUM(total_price) * 100 / (SELECT SUM(total_price) FROM pizza_sales), 2) AS Pct_Sales
-FROM pizza_sales
-GROUP BY pizza_category;
-```
+> Single-page Excel dashboard showing KPIs, daily/hourly trends, best/worst sellers, and sales by category & size with a dark pizza-themed background.
 
-### Top 5 Best Sellers by Revenue
+---
+
+### 📊 Tableau Dashboard
+
+**Page 1 — Best / Worst Sellers**
+
+![Tableau Best Worst Sellers] <img width="1541" height="867" alt="Screenshot 2026-04-09 025230" src="https://github.com/user-attachments/assets/30f3974e-7dd9-47b8-ba13-173ea8ee69c6" />
+
+
+**Page 2 — Home (Trends & Category Performance)**
+
+![Tableau Home Dashboard] <img width="1548" height="866" alt="Screenshot 2026-04-09 025208" src="https://github.com/user-attachments/assets/3585c95e-6078-4efe-b694-d91816cb9bc6" />
+
+
+> Tableau dashboards feature interactive filters for Pizza Category and Order Date range, with hourly/weekly trend charts and category breakdown.
+
+---
+
+### 📊 Power BI Dashboard
+
+**Page 1 — Best / Worst Sellers**
+
+![Power BI Best Worst Sellers] <img width="1347" height="737" alt="Screenshot 2026-04-12 133649" src="https://github.com/user-attachments/assets/9d979af6-cfc4-4816-992b-4cd13fceb38c" />
+
+
+**Page 2 — Home (Trends & Performance)**
+
+![Power BI Home Dashboard] <img width="1347" height="738" alt="Screenshot 2026-04-12 133624" src="https://github.com/user-attachments/assets/62766b8c-1c52-4149-9ac6-31cacd057d5a" />
+
+
+> Power BI dashboards include slicer filters, KPI cards, Top 5 / Bottom 5 pizza charts, and monthly/daily trend analysis.
+
+---
+
+## 🔍 Key Insights
+
+### 🏆 Best Sellers
+- **Revenue:** The Thai Chicken Pizza (~$43K)
+- **Quantity & Orders:** The Classic Deluxe Pizza (~2.5K units, ~2.3K orders)
+
+### 📉 Worst Sellers
+- **Revenue, Quantity & Orders:** The Brie Carre Pizza (lowest across all metrics)
+
+### 📅 Busiest Days & Times
+- **Peak Days:** Friday and Saturday evenings
+- **Peak Hours:** 12:00 PM – 1:00 PM and 4:00 PM – 7:00 PM
+- **Peak Months:** July and January
+- **Peak Week:** 48th week (December)
+
+### 🍕 Category & Size Performance
+- **Top Category:** Classic (26.91% of sales, $220.05K)
+- **Top Size:** Large (45.89% of sales)
+
+---
+
+## 🧪 SQL Queries Used
+
 ```sql
-SELECT pizza_name,
-       ROUND(SUM(total_price), 2) AS Total_Revenue
+-- Total Revenue
+SELECT SUM(total_price) AS Total_Revenue FROM pizza_sales;
+
+-- Average Order Value
+SELECT SUM(total_price) / COUNT(DISTINCT order_id) AS Avg_Order_Value FROM pizza_sales;
+
+-- Total Pizzas Sold
+SELECT SUM(quantity) AS Total_Pizzas_Sold FROM pizza_sales;
+
+-- Total Orders
+SELECT COUNT(DISTINCT order_id) AS Total_Orders FROM pizza_sales;
+
+-- Top 5 Pizzas by Revenue
+SELECT pizza_name, SUM(total_price) AS Total_Revenue
 FROM pizza_sales
 GROUP BY pizza_name
 ORDER BY Total_Revenue DESC
 LIMIT 5;
-```
 
-### Bottom 5 Worst Sellers by Quantity
-```sql
-SELECT pizza_name,
-       SUM(quantity) AS Total_Quantity
+-- Daily Trend for Orders
+SELECT DAYNAME(order_date) AS order_day, COUNT(DISTINCT order_id) AS Total_Orders
 FROM pizza_sales
-GROUP BY pizza_name
-ORDER BY Total_Quantity ASC
-LIMIT 5;
+GROUP BY DAYNAME(order_date);
+
+-- % Sales by Pizza Category
+SELECT pizza_category,
+       ROUND(SUM(total_price) * 100 / (SELECT SUM(total_price) FROM pizza_sales), 2) AS PCT
+FROM pizza_sales
+GROUP BY pizza_category;
+
+-- Hourly Trend for Orders
+SELECT HOUR(order_time) AS order_hour, COUNT(DISTINCT order_id) AS Total_Orders
+FROM pizza_sales
+GROUP BY HOUR(order_time)
+ORDER BY order_hour;
 ```
 
 ---
 
-## 🧠 Learnings & Skills Demonstrated
+## 📉 Python EDA Highlights (Jupyter Notebook)
 
-- ✅ Wrote optimized SQL queries for KPI extraction, trend analysis, and aggregations
-- ✅ Built an interactive **Power BI dashboard** with slicers, donut/pie charts, and bar charts
-- ✅ Built a multi-page **Tableau dashboard** with filters, tooltips, and drill-down navigation
-- ✅ Compared two BI tools on the same dataset — understanding strengths of each
-- ✅ Performed comparative analysis across categories, sizes, and time dimensions
-- ✅ Practiced data storytelling — presenting raw data as actionable business insights
-- ✅ Identified revenue drivers and underperforming products for business decision-making
+- Data loading and null-value checks using **Pandas**
+- Distribution plots for pizza sizes and categories using **Seaborn**
+- Monthly and hourly revenue trends using **Matplotlib**
+- Top/bottom pizza visualizations using horizontal bar charts
+- Correlation analysis between order quantity, price, and revenue
 
 ---
 
-## 📬 Connect
+## 🚀 How to Run
+
+### SQL
+1. Import `pizza_sales.csv` into MySQL or SQL Server
+2. Run queries from `sql/pizza_sales_queries.sql`
+
+### Python
+```bash
+pip install pandas matplotlib seaborn jupyter
+jupyter notebook notebooks/Pizza_Sales_EDA.ipynb
+```
+
+### Excel
+1. Open `excel/Pizza_Sales_Excel.xlsx`
+2. Refresh pivot tables if prompted
+
+### Power BI
+1. Open `powerbi/Pizza_Sales_PowerBI.pbix` in Power BI Desktop
+2. Refresh data source if needed
+
+### Tableau
+1. Open `tableau/Pizza_Sales_Tableau.twbx` in Tableau Desktop or Tableau Public
+
+---
+
+## 👨‍💻 Author
 
 **Swapnil Ware**  
-Final Year IT Student | Data Science & AI Enthusiast
+Final Year B.E. – Information Technology  
+JSPM Bhivrabai Sawant Institute of Technology and Research (SPPU), Pune  
 
-- 🔗 [LinkedIn](https://www.linkedin.com/in/swapnilware)
-- 💻 [GitHub](https://github.com/wareswapnil)
-- 📧 swapnil.ware@email.com
+[![GitHub](https://img.shields.io/badge/GitHub-wareswapnil-black?logo=github)](https://github.com/wareswapnil)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/swapnil-ware)
 
 ---
 
-> ⭐ *If you found this project useful, consider giving it a star!*
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
